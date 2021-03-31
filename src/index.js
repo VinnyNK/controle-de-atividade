@@ -10,6 +10,8 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Login from "./components/Login";
 import Config from "./config";
 
+document.title = 'Controle de Atividades'
+
 if(!firebase.apps.length){
     firebase.initializeApp(Config);
 } else {
