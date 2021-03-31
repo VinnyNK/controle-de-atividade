@@ -1,0 +1,43 @@
+.status {
+    background-color: rgb(13,17,23);
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+}
+
+.title p {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.tickets-number p {
+    font-size: 1em;
+}
+
+@media only screen and (max-width: 1150px) {
+    .title p {
+        font-size: .9em;
+    }
+
+    .tickets-number p {
+        font-size: 0.7em;
+    }
+}
+
+.primary {
+    color: rgba(15, 138, 219, 1)
+}
+
+.success {
+    color: rgba(0, 163, 49, 1);
+}
+
+.caution {
+    color: rgba(212, 156, 2, 1);
+}
+
+.danger {
+    color: rgba(247, 54, 54, 1);
+}

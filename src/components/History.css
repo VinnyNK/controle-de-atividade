@@ -1,0 +1,13 @@
+ul.history {
+    list-style-type: none;
+    float: left;
+}
+
+ul.history li {
+    margin-top: 10px;
+    text-align: left;
+}
+
+ul.history li small {
+    color: #7b7b7b;
+}

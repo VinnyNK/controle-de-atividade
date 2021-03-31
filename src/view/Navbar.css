@@ -1,0 +1,55 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #d0bebe17;
+
+}
+nav h1{
+    text-transform: uppercase;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 10px;
+}
+nav ul li button{
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgba(255, 255, 255, .5);
+    position: relative;
+    display: inline-block;
+    outline:none;
+}
+nav ul li button::before{
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: .5s;
+    border-bottom: 3px solid orange;
+
+}
+nav ul li button:hover::before{
+    width: 100%;
+}
+
+@media(max-width:700px){
+    nav{
+        display: block;
+        text-align: center;
+    }
+    nav ul li{
+        display: block;
+        padding: 10px 0;
+    }
+}

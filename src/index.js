@@ -1,12 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './view/App'
 import reportWebVitals from './reportWebVitals';
+import firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/firestore";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import Login from "./components/Login";
+import Config from "./config";
+
+if(!firebase.apps.length){
+    firebase.initializeApp(Config);
+} else {
+    firebase.app()
+}
+
+const db = firebase.firestore()
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <Router>
+          <Switch>
+              <Route exact path="/">
+                <App db={db} />
+              </Route>
+              <Route exact path="/login">
+                  <Login />
+              </Route>
+          </Switch>
+      </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
