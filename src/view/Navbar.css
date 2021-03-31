@@ -48,8 +48,10 @@ nav ul li button:hover::before{
         display: block;
         text-align: center;
     }
+
     nav ul li{
         display: block;
         padding: 10px 0;
+        text-align: left;
     }
 }
